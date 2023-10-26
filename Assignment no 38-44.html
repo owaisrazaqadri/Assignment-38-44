@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38-48</title>
+</head>
+<body>
+    <script>
+        /*//Question = 1
+function power(a,b){
+return Math.pow(a,b);
+}
+var result=power(5,6)
+document.write(result);
+power();
+        */
+       /*//Question = 2
+       function isLeapYear(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
+
+// Example usage:
+var yearToCheck = 2024; // Change this to the year you want to check
+if (isLeapYear(yearToCheck)) {
+  document.write(yearToCheck + " is a leap year.");
+} else {
+  document.write(yearToCheck + " is not a leap year.");
+}
+
+        */
+       /*//Question = 3
+      function calculateArea(a, b, c) {
+  var s = (a + b + c) / 2;
+  var area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+  return area;
+}
+
+function main(a, b, c) {
+  var area = calculateArea(a, b, c);
+  return area;
+}
+
+// Example usage:
+var sideA = 5; // Replace with the length of side 'a'
+var sideB = 6; // Replace with the length of side 'b'
+var sideC = 7; // Replace with the length of side 'c'
+
+var triangleArea = main(sideA, sideB, sideC);
+document.write("The area of the triangle is: " + triangleArea);
+
+        */
+       /*//Question = 4
+      function calculateAverage(subject1, subject2, subject3) {
+  return (subject1 + subject2 + subject3) / 3;
+}
+
+function calculatePercentage(subject1, subject2, subject3) {
+  var totalMarks = 300; // Assuming each subject has a maximum of 100 marks
+  var obtainedMarks = subject1 + subject2 + subject3;
+  return (obtainedMarks / totalMarks) * 100;
+}
+
+function mainFunction(subject1, subject2, subject3) {
+  var average = calculateAverage(subject1, subject2, subject3);
+  var percentage = calculatePercentage(subject1, subject2, subject3);
+
+  document.write("Marks in Subject 1: " + subject1);
+  document.write("Marks in Subject 2: " + subject2);
+  document.write("Marks in Subject 3: " + subject3);
+  document.write("Average Marks: " + average);
+  document.write("Percentage: " + percentage + "%");
+}
+
+// Example usage:
+var marksSubject1 = 80;
+var marksSubject2 = 90;
+var marksSubject3 = 75;
+
+mainFunction(marksSubject1, marksSubject2, marksSubject3);
+
+        */
+       /*//Question = 5
+      function customIndexOf(string, charToFind) {
+  for (var i = 0; i < string.length; i++) {
+    if (string[i] === charToFind) {
+      return i; // Return the index of the first occurrence
+    }
+  }
+  return -1; // Return -1 if the character is not found
+}
+
+// Example usage:
+var text = "Hello, World!";
+var character = "o";
+var index = customIndexOf(text, character);
+
+if (index !== -1) {
+  document.write("The character '" + character + "' is found at index " + index);
+} else {
+  document.write("The character '" + character + "' is not found in the string.");
+}
+
+        */
+       /*//Question = 6
+      function removeVowels(sentence) {
+  var vowels = "AEIOUaeiou"; // List of vowels
+  var result = "";
+
+  for (var i = 0; i < sentence.length; i++) {
+    // Check if the current character is not a vowel
+    if (vowels.indexOf(sentence[i]) === -1) {
+      result += sentence[i];
+    }
+  }
+
+  return result;
+}
+
+// Example usage:
+var inputSentence = "This is a sample sentence with vowels.";
+var sentenceWithoutVowels = removeVowels(inputSentence);
+document.write(sentenceWithoutVowels);
+
+        */
+       /*//Question = 7
+      function countSuccessiveVowels(text) {
+  var vowels = "aeiouAEIOU"; // List of vowels
+  var count = 0;
+
+  for (var i = 0; i < text.length - 1; i++) {
+    var currentChar = text[i];
+    var nextChar = text[i + 1];
+
+    // Check if both currentChar and nextChar are vowels
+    if (vowels.includes(currentChar) && vowels.includes(nextChar)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+// Example usage:
+var text = "Pleases read this application and give me gratuity";
+var result = countSuccessiveVowels(text);
+console.log("Number of successive vowels: " + result);
+
+        */
+       /*//Question = 8
+      function convertToMeters(kilometers) {
+  return kilometers * 1000;
+}
+
+function convertToFeet(kilometers) {
+  return kilometers * 3280.84;
+}
+
+function convertToInches(kilometers) {
+  return kilometers * 39370.1;
+}
+
+function convertToCentimeters(kilometers) {
+  return kilometers * 100000;
+}
+
+function printConversions(kilometers) {
+  var meters = convertToMeters(kilometers);
+  var feet = convertToFeet(kilometers);
+  var inches = convertToInches(kilometers);
+  var centimeters = convertToCentimeters(kilometers);
+
+  console.log("Distance in Meters: " + meters + " meters");
+  console.log("Distance in Feet: " + feet + " feet");
+  console.log("Distance in Inches: " + inches + " inches");
+  console.log("Distance in Centimeters: " + centimeters + " centimeters");
+}
+
+// Example usage:
+var distanceInKilometers = 50; // Replace with the actual distance
+printConversions(distanceInKilometers);
+
+       */
+       /*//Question = 9
+      function calculateOvertimePay(hoursWorked) {
+  var regularHours = 40;
+  var overtimeRate = 12.00;
+  var overtimeHours = 0;
+
+  if (hoursWorked > regularHours) {
+    overtimeHours = hoursWorked - regularHours;
+  }
+
+  var overtimePay = overtimeHours * overtimeRate;
+  return overtimePay;
+}
+
+// Example usage:
+var hoursWorked = 45; // Replace with the actual hours worked
+var overtimePay = calculateOvertimePay(hoursWorked);
+console.log("Overtime Pay: Rs. " + overtimePay);
+
+        */
+      /*//Question = 10
+      function calculateCurrencyNotes(amountInHundreds) {
+  var denomination100 = 100;
+  var denomination50 = 50;
+  var denomination10 = 10;
+
+  // Calculate the number of each denomination
+  var notes100 = Math.floor(amountInHundreds);
+  var remainingAmount = (amountInHundreds - notes100) * 100; // Convert to the actual amount
+  var notes50 = Math.floor(remainingAmount / denomination50);
+  remainingAmount = remainingAmount % denomination50;
+  var notes10 = Math.floor(remainingAmount / denomination10);
+
+  return {
+    notes100: notes100,
+    notes50: notes50,
+    notes10: notes10,
+  };
+}
+
+// Example usage:
+var amountInHundreds = 3; // Replace with the actual amount in hundreds
+var notes = calculateCurrencyNotes(amountInHundreds);
+
+document.write("Number of 100 Rupee Notes: " + notes.notes100);
+document.write("Number of 50 Rupee Notes: " + notes.notes50);
+document.write("Number of 10 Rupee Notes: " + notes.notes10);
+
+        */
+    </script>
+</body>
+</html>
